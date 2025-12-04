@@ -1,0 +1,6 @@
+@BilogChallenge_HostAddress = http://localhost:5218
+
+GET {{BilogChallenge_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
