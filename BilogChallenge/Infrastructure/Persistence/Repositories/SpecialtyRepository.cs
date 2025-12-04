@@ -13,14 +13,22 @@ namespace BilogChallenge.Infrastructure.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public Task AddAsync( Especialidad especialidad )
+        public async Task AddAsync( Especialidad especialidad )
         {
-            throw new NotImplementedException();
+            if ( especialidad == null ) throw new ArgumentNullException( nameof(especialidad), "El objeto especialidad no puede ser null." );
+
+            await _dbContext.AddAsync( especialidad );
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task DeleteAsync( int id )
+        public async Task DeleteAsync( int id )
         {
-            throw new NotImplementedException();
+            var specialty = await _dbContext.especialidades.FindAsync( id );
+            if ( specialty != null )
+            {
+                _dbContext.especialidades.Remove( specialty );
+                await _dbContext.SaveChangesAsync();
+            }
         }
 
         public async Task<IEnumerable<Especialidad>> GetAllAsync()
@@ -28,14 +36,29 @@ namespace BilogChallenge.Infrastructure.Persistence.Repositories
             return await _dbContext.especialidades.ToListAsync();
         }
 
-        public Task<Especialidad?> GetByIdAsync( int id )
+        public async Task<Especialidad?> GetByIdAsync( int id )
         {
-            throw new NotImplementedException();
+            return await _dbContext.especialidades.FindAsync( id );
         }
 
-        public Task UpdateAsync( Especialidad especialidad )
+        public async Task<Especialidad?> UpdateAsync( Especialidad especialidad )
         {
-            throw new NotImplementedException();
+            if ( especialidad == null ) throw new ArgumentNullException( nameof(especialidad), "El objeto especialidad no puede ser null." );
+
+            var existingSpecialty = await _dbContext.especialidades.FirstOrDefaultAsync( e => e.id_especialidad == especialidad.id_especialidad );
+
+            if ( existingSpecialty == null ) return null;
+
+            existingSpecialty.cod_especialidad = especialidad.cod_especialidad;
+            existingSpecialty.descripcion      = especialidad.descripcion;
+
+            await _dbContext.SaveChangesAsync();
+            return existingSpecialty;
+        }
+
+        public async Task<bool> ExistsByCodeOrDescriptionAsync( string cod_especialidad, string descripcion )
+        {
+            return await _dbContext.especialidades.AnyAsync( p => p.cod_especialidad == cod_especialidad || p.descripcion == descripcion );
         }
     }
 }

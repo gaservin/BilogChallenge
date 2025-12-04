@@ -10,6 +10,10 @@ namespace BilogChallenge.Application.Mapping
         {
             CreateMap<Especialidad, SpecialtyDto>();
             CreateMap<SpecialtyDto, Especialidad>();
+            CreateMap<Especialidad, CreateSpecialtyDto>();
+            CreateMap<CreateSpecialtyDto, Especialidad>();
+            CreateMap<Especialidad, UpdateSpecialtyDto>();
+            CreateMap<UpdateSpecialtyDto, Especialidad>();
         }
     }
 }
