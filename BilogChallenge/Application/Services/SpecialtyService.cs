@@ -32,14 +32,14 @@ namespace BilogChallenge.Application.Services
 
         public async Task<SpecialtyDto> AddSpecialtyAsync( CreateSpecialtyDto specialty )
         {
+            if ( string.IsNullOrWhiteSpace( specialty.cod_especialidad ) ) throw new ValidationException( "El cod_especialidad es obligatorio." );
+
+            if ( string.IsNullOrWhiteSpace( specialty.descripcion ) ) throw new ValidationException( "La descripción es obligatoria." );
+
             if ( await _specialtyRepository.ExistsByCodeOrDescriptionAsync( specialty.cod_especialidad, specialty.descripcion ) )
             {
                 throw new DuplicateException( "Código o descripción duplicados" );
             }
-
-            if ( string.IsNullOrWhiteSpace( specialty.cod_especialidad ) ) throw new ValidationException( "El cod_especialidad es obligatorio." );
-
-            if ( string.IsNullOrWhiteSpace( specialty.descripcion ) ) throw new ValidationException( "La descripción es obligatoria." );
 
             var newSpecialty = _mapper.Map<Especialidad>( specialty );
 
