@@ -1,0 +1,883 @@
+{
+	"info": {
+		"_postman_id": "93311ed3-27dc-45c9-8d93-c1c0d0f4d92b",
+		"name": "Bilog Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45570132",
+		"_collection_link": "https://kega-2087522.postman.co/workspace/Kega's-Workspace~ee242e40-4c14-43a8-85e8-8c7d9aabfa07/collection/45570132-93311ed3-27dc-45c9-8d93-c1c0d0f4d92b?action=share&source=collection_link&creator=45570132"
+	},
+	"item": [
+		{
+			"name": "Get All Especialidades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7070/api/Specialty",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"Specialty"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Especilidad Inicial",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:23:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id_especialidad\": 1,\n        \"cod_especialidad\": \"A001\",\n        \"descripcion\": \"Desc A001 abc\",\n        \"rowVersion\": \"AAAAAAAARlw=\"\n    },\n    {\n        \"id_especialidad\": 2,\n        \"cod_especialidad\": \"A002\",\n        \"descripcion\": \"Desc A002\",\n        \"rowVersion\": \"AAAAAAAARlE=\"\n    },\n    {\n        \"id_especialidad\": 3,\n        \"cod_especialidad\": \"string\",\n        \"descripcion\": \"string\",\n        \"rowVersion\": \"AAAAAAAARlI=\"\n    },\n    {\n        \"id_especialidad\": 5,\n        \"cod_especialidad\": \"D001\",\n        \"descripcion\": \"descripcion\",\n        \"rowVersion\": \"AAAAAAAARlQ=\"\n    },\n    {\n        \"id_especialidad\": 6,\n        \"cod_especialidad\": \"F001\",\n        \"descripcion\": \"Desc. F001 XXX\",\n        \"rowVersion\": \"AAAAAAAARlU=\"\n    },\n    {\n        \"id_especialidad\": 7,\n        \"cod_especialidad\": \"Z001\",\n        \"descripcion\": \"Desc Z001\",\n        \"rowVersion\": \"AAAAAAAARlY=\"\n    },\n    {\n        \"id_especialidad\": 8,\n        \"cod_especialidad\": \"Z002\",\n        \"descripcion\": \"Desc Z002\",\n        \"rowVersion\": \"AAAAAAAARlc=\"\n    },\n    {\n        \"id_especialidad\": 9,\n        \"cod_especialidad\": \"X001\",\n        \"descripcion\": \"especialidad X001\",\n        \"rowVersion\": \"AAAAAAAARl4=\"\n    }\n]"
+				},
+				{
+					"name": "Get All Especialidades al finalizar pruebas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:41:40 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id_especialidad\": 1,\n        \"cod_especialidad\": \"A001 HHHH\",\n        \"descripcion\": \"Desc A001 abc\",\n        \"rowVersion\": \"AAAAAAAARmQ=\"\n    },\n    {\n        \"id_especialidad\": 2,\n        \"cod_especialidad\": \"A002\",\n        \"descripcion\": \"Desc A002\",\n        \"rowVersion\": \"AAAAAAAARlE=\"\n    },\n    {\n        \"id_especialidad\": 3,\n        \"cod_especialidad\": \"string\",\n        \"descripcion\": \"string\",\n        \"rowVersion\": \"AAAAAAAARlI=\"\n    },\n    {\n        \"id_especialidad\": 5,\n        \"cod_especialidad\": \"D001\",\n        \"descripcion\": \"descripcion\",\n        \"rowVersion\": \"AAAAAAAARlQ=\"\n    },\n    {\n        \"id_especialidad\": 7,\n        \"cod_especialidad\": \"Z001\",\n        \"descripcion\": \"Desc Z001\",\n        \"rowVersion\": \"AAAAAAAARlY=\"\n    },\n    {\n        \"id_especialidad\": 8,\n        \"cod_especialidad\": \"Z002\",\n        \"descripcion\": \"Desc Z002\",\n        \"rowVersion\": \"AAAAAAAARlc=\"\n    },\n    {\n        \"id_especialidad\": 9,\n        \"cod_especialidad\": \"X001\",\n        \"descripcion\": \"especialidad X001\",\n        \"rowVersion\": \"AAAAAAAARl4=\"\n    },\n    {\n        \"id_especialidad\": 10,\n        \"cod_especialidad\": \"Z003\",\n        \"descripcion\": \"Desc Z003\",\n        \"rowVersion\": \"AAAAAAAARmA=\"\n    },\n    {\n        \"id_especialidad\": 11,\n        \"cod_especialidad\": \"Z006\",\n        \"descripcion\": \"Desc A0021234\",\n        \"rowVersion\": \"AAAAAAAARmE=\"\n    },\n    {\n        \"id_especialidad\": 12,\n        \"cod_especialidad\": \"H001\",\n        \"descripcion\": \"Descripción del H001\",\n        \"rowVersion\": \"AAAAAAAARmI=\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post Especialidad",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cod_especialidad\": \"H001\",\r\n    \"descripcion\": \"Descripción del H001\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7070/api/Specialty",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"Specialty"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sin código especialidad",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"\",\r\n    \"descripcion\": \"Desc A002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:32:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El cod_especialidad es obligatorio.\"\n}"
+				},
+				{
+					"name": "Sin descripcón",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"Z004\",\r\n    \"descripcion\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:32:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"La descripción es obligatoria.\"\n}"
+				},
+				{
+					"name": "Descripción duplicada",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"Z004\",\r\n    \"descripcion\": \"Desc A002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:33:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Código o descripción duplicados\"\n}"
+				},
+				{
+					"name": "Código especialidad duplicado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"X001\",\r\n    \"descripcion\": \"Desc A0021234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:34:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Código o descripción duplicados\"\n}"
+				},
+				{
+					"name": "Creación de especialidad",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"H001\",\r\n    \"descripcion\": \"Descripción del H001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:34:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Location",
+							"value": "https://localhost:7070/api/Specialty?id=12"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id_especialidad\": 12,\n    \"cod_especialidad\": \"H001\",\n    \"descripcion\": \"Descripción del H001\",\n    \"rowVersion\": \"AAAAAAAARmI=\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Especialidad",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7070/api/Specialty/6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"Specialty",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Id no existe",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty/1111",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty",
+								"1111"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:26:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"La especialidad con Id 1111 no existe.\"\n}"
+				},
+				{
+					"name": "Eliminada correctamente",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:27:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Especialidad con ID 6 eliminada correctamente.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "PUT Especialidad",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cod_especialidad\": \"A001 HHHH\",\r\n    \"descripcion\": \"Desc A001 abc dddd\",\r\n    \"rowVersion\": \"AAAAAAAARmM=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7070/api/Specialty/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7070",
+					"path": [
+						"api",
+						"Specialty",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualización descripción",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"A001\",\r\n    \"descripcion\": \"Cambio descripción\",\r\n    \"rowVersion\": \"AAAAAAAARlw=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:36:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id_especialidad\": 1,\n    \"cod_especialidad\": \"A001\",\n    \"descripcion\": \"Cambio descripción\",\n    \"rowVersion\": \"AAAAAAAARmM=\"\n}"
+				},
+				{
+					"name": "Actualización descripción con una existente",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"A001\",\r\n    \"descripcion\": \"especialidad X001\",\r\n    \"rowVersion\": \"AAAAAAAARmM=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty",
+								"1"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:37:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Código o descripción duplicados\"\n}"
+				},
+				{
+					"name": "Sin código especialidad",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"\",\r\n    \"descripcion\": \"especialidad X001\",\r\n    \"rowVersion\": \"AAAAAAAARmM=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty",
+								"1"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:37:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El cod_especialidad es obligatorio.\"\n}"
+				},
+				{
+					"name": "Sin descripción",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"A001\",\r\n    \"descripcion\": \"\",\r\n    \"rowVersion\": \"AAAAAAAARmM=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty",
+								"1"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:38:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"La descripción es obligatoria.\"\n}"
+				},
+				{
+					"name": "Actualización de código",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"A001 HHHH\",\r\n    \"descripcion\": \"Desc A001 abc\",\r\n    \"rowVersion\": \"AAAAAAAARmM=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:39:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id_especialidad\": 1,\n    \"cod_especialidad\": \"A001 HHHH\",\n    \"descripcion\": \"Desc A001 abc\",\n    \"rowVersion\": \"AAAAAAAARmQ=\"\n}"
+				},
+				{
+					"name": "Intento de actualización del campo descripción luego de que cambio rowversión",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cod_especialidad\": \"A001 HHHH\",\r\n    \"descripcion\": \"Desc A001 abc dddd\",\r\n    \"rowVersion\": \"AAAAAAAARmM=\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7070/api/Specialty/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7070",
+							"path": [
+								"api",
+								"Specialty",
+								"1"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 18:39:30 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"El registro ha sido modificado por otro usuario.\"\n}"
+				}
+			]
+		}
+	]
+}
