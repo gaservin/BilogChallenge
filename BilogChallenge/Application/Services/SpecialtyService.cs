@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BilogChallenge.Application.DTOs.Specialty;
+using BilogChallenge.Application.Exceptions;
 using BilogChallenge.Application.Interfaces.Repositories;
 using BilogChallenge.Application.Interfaces.Services;
 using BilogChallenge.Domain.Entities;
@@ -33,7 +34,7 @@ namespace BilogChallenge.Application.Services
         {
             if ( await _specialtyRepository.ExistsByCodeOrDescriptionAsync( specialty.cod_especialidad, specialty.descripcion ) )
             {
-                throw new Exception( "Código o descripción duplicados" );
+                throw new DuplicateException( "Código o descripción duplicados" );
             }
 
             if ( string.IsNullOrWhiteSpace( specialty.cod_especialidad ) ) throw new ValidationException( "El cod_especialidad es obligatorio." );
@@ -50,10 +51,16 @@ namespace BilogChallenge.Application.Services
         public async Task<SpecialtyDto?> UpdateSpecialtyAsync( int id, UpdateSpecialtyDto specialty )
         {
             var existingSpecialty = await _specialtyRepository.GetByIdAsync( id );
-            if ( existingSpecialty == null ) throw new KeyNotFoundException( "La especialidad no existe." );
+            if ( existingSpecialty == null ) throw new NotFoundException( $"La especialidad con Id {id} no existe." );
 
-            var exists = await _specialtyRepository.ExistsByCodeOrDescriptionAsync( specialty.cod_especialidad, specialty.descripcion );
-            if ( exists ) throw new Exception( "Código o descripción duplicados" );
+            if ( string.IsNullOrWhiteSpace( specialty.cod_especialidad ) ) throw new ValidationException( "El cod_especialidad es obligatorio." );
+
+            if ( string.IsNullOrWhiteSpace( specialty.descripcion      ) ) throw new ValidationException( "La descripción es obligatoria." );
+
+            if ( !existingSpecialty.rowversion.SequenceEqual( specialty.rowversion ) ) throw new ConcurrencyException( "El registro ha sido modificado por otro usuario." );
+
+            var exists = await _specialtyRepository.ExistsByCodeOrDescriptionIdAsync( id, specialty.cod_especialidad, specialty.descripcion );
+            if ( exists ) throw new DuplicateException( "Código o descripción duplicados" );
 
             _mapper.Map( specialty, existingSpecialty );
             await _specialtyRepository.UpdateAsync( existingSpecialty );
@@ -64,7 +71,7 @@ namespace BilogChallenge.Application.Services
         public async Task DeleteSpecialtyAsync( int id )
         {
             var existingSpecialty = await _specialtyRepository.GetByIdAsync( id );
-            if ( existingSpecialty == null ) throw new KeyNotFoundException( "La especialidad no existe." );
+            if ( existingSpecialty == null ) throw new NotFoundException( $"La especialidad con Id {id} no existe." );
 
             await _specialtyRepository.DeleteAsync( id );
         }

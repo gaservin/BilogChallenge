@@ -1,4 +1,4 @@
 ﻿namespace BilogChallenge.Application.DTOs.Specialty
 {
-    public record UpdateSpecialtyDto( int id_especialidad, string cod_especialidad, string descripcion );
+    public record UpdateSpecialtyDto( string cod_especialidad, string descripcion, byte[] rowversion );
 }

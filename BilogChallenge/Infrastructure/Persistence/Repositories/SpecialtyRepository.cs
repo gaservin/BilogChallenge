@@ -56,9 +56,18 @@ namespace BilogChallenge.Infrastructure.Persistence.Repositories
             return existingSpecialty;
         }
 
-        public async Task<bool> ExistsByCodeOrDescriptionAsync( string cod_especialidad, string descripcion )
+        public async Task<bool> ExistsByCodeOrDescriptionAsync( string codEspecialidad, string descripcion )
         {
-            return await _dbContext.especialidades.AnyAsync( p => p.cod_especialidad == cod_especialidad || p.descripcion == descripcion );
+            return await _dbContext.especialidades.AnyAsync( p => p.cod_especialidad == codEspecialidad || p.descripcion == descripcion );
+        }
+
+        public async Task<bool> ExistsByCodeOrDescriptionIdAsync( int? idEspecialidad, string codEspecialidad, string descripcion )
+        {
+            IQueryable<Especialidad> query = _dbContext.especialidades;
+
+            if ( idEspecialidad.HasValue && idEspecialidad > 0 ) query = query.Where( p => p.id_especialidad != idEspecialidad );
+
+            return await query.AnyAsync( p => p.cod_especialidad == codEspecialidad || p.descripcion == descripcion );
         }
     }
 }

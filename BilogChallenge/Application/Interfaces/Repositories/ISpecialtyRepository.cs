@@ -9,6 +9,7 @@ namespace BilogChallenge.Application.Interfaces.Repositories
         Task<Especialidad?> UpdateAsync( Especialidad especialidad );
         Task AddAsync   ( Especialidad especialidad );
         Task DeleteAsync( int id );
-        Task<bool> ExistsByCodeOrDescriptionAsync( string cod_especialidad, string descripcion );
+        Task<bool> ExistsByCodeOrDescriptionAsync( string codEspecialidad, string descripcion );
+        Task<bool> ExistsByCodeOrDescriptionIdAsync( int? id, string codEspecialidad, string descripcion );
     }
 }

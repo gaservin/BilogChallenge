@@ -19,7 +19,7 @@ namespace BilogChallenge.Infrastructure.Persistence
                 entity.HasKey  ( e => e.id_especialidad  );
                 entity.Property( e => e.cod_especialidad ).HasMaxLength(15);
                 entity.Property( e => e.descripcion      ).HasMaxLength(50);
-                entity.Property( e => e.rowversion       ).IsRowVersion();
+                entity.Property( e => e.rowversion       ).IsRowVersion().IsConcurrencyToken();
             });
         }
     }
